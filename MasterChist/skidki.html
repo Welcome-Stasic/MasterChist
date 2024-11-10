@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Скидки</title>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/skidki.css">
+	<script src="js/3.4.js"></script>
+	<script src="js/unlazy.with-hashing.iife.js" defer init></script>
+	<script>
+		window.tailwind.config = {
+			darkMode: ['class'],
+			theme: {
+				extend: {
+					colors: {
+						border: 'hsl(var(--border))',
+						input: 'hsl(var(--input))',
+						ring: 'hsl(var(--ring))',
+						background: 'hsl(var(--background))',
+						foreground: 'hsl(var(--foreground))',
+						primary: {
+							DEFAULT: 'hsl(var(--primary))',
+							foreground: 'hsl(var(--primary-foreground))'
+						},
+						secondary: {
+							DEFAULT: 'hsl(var(--secondary))',
+							foreground: 'hsl(var(--secondary-foreground))'
+						},
+						destructive: {
+							DEFAULT: 'hsl(var(--destructive))',
+							foreground: 'hsl(var(--destructive-foreground))'
+						},
+						muted: {
+							DEFAULT: 'hsl(var(--muted))',
+							foreground: 'hsl(var(--muted-foreground))'
+						},
+						accent: {
+							DEFAULT: 'hsl(var(--accent))',
+							foreground: 'hsl(var(--accent-foreground))'
+						},
+						popover: {
+							DEFAULT: 'hsl(var(--popover))',
+							foreground: 'hsl(var(--popover-foreground))'
+						},
+						card: {
+							DEFAULT: 'hsl(var(--card))',
+							foreground: 'hsl(var(--card-foreground))'
+						},
+					},
+				}
+			}
+		}
+	</script>
+	<style type="text/tailwindcss">
+		@layer base {
+			:root {
+--background: 0 0% 100%;
+--foreground: 240 10% 3.9%;
+--card: 0 0% 100%;
+--card-foreground: 240 10% 3.9%;
+--popover: 0 0% 100%;
+--popover-foreground: 240 10% 3.9%;
+--primary: 240 5.9% 10%;
+--primary-foreground: 0 0% 98%;
+--secondary: 240 4.8% 95.9%;
+--secondary-foreground: 240 5.9% 10%;
+--muted: 240 4.8% 95.9%;
+--muted-foreground: 240 3.8% 46.1%;
+--accent: 240 4.8% 95.9%;
+--accent-foreground: 240 5.9% 10%;
+--destructive: 0 84.2% 60.2%;
+--destructive-foreground: 0 0% 98%;
+--border: 240 5.9% 90%;
+--input: 240 5.9% 90%;
+--ring: 240 5.9% 10%;
+--radius: 0.5rem;
+			}
+			.dark {
+--foreground: 0 0% 98%;
+--card: 240 10% 3.9%;
+--card-foreground: 0 0% 98%;
+--popover: 240 10% 3.9%;
+--popover-foreground: 0 0% 98%;
+--primary: 0 0% 98%;
+--primary-foreground: 240 5.9% 10%;
+--secondary: 240 3.7% 15.9%;
+--secondary-foreground: 0 0% 98%;
+--muted: 240 3.7% 15.9%;
+--muted-foreground: 240 5% 64.9%;
+--accent: 240 3.7% 15.9%;
+--accent-foreground: 0 0% 98%;
+--destructive: 0 62.8% 30.6%;
+--destructive-foreground: 0 0% 98%;
+--border: 240 3.7% 15.9%;
+--input: 240 3.7% 15.9%;
+--ring: 240 4.9% 83.9%;
+			}
+		}
+	</style>
+<header class="content--header">
+	<div class="logo">
+		<img class="logo"
+			src="assets/masterchist-fotor-bg-remover-2024071361140.png"
+			alt="лого">
+	</div>
+	<button class="menu-btn" onclick="toggleMenu()">Menu</button>
+	<nav class="nav-cap">
+		<ul class="ul-cap">
+			<li class="li-cap"><a href="index.html">Главная</a></li>
+			<li class="li-cap"><a href="uslugi.html">Услуги</a></li>
+			<li class="li-cap"><a href="raboti.html">До/После</a></li>
+			<li class="li-cap"><a href="skidki.html">Скидки</a></li>
+			<li class="li-cap"><a href="trud.html">Трудоустройство</a></li>
+		</ul>
+	</nav>
+	<P class="number" href="tel:+79226416111">+7 (922) 641-61-11</P>
+</header>
+  </head>
+  <body>
+	
+    <div class="flex flex-col md:flex-row bg-yellow-500 p-8">
+  <div class="flex-1 space-y-4">
+    <div class="bg-black text-yellow-500 p-6 rounded-lg">
+      <h2 class="text-lg font-bold">Скидка 10%</h2>
+      <p>Постоянным клиентам*</p>
+      <p class="text-sm">* 2 и более заказов</p>
+    </div>
+    <div class="bg-black text-yellow-500 p-6 rounded-lg">
+      <h2 class="text-lg font-bold">Скидка 5%</h2>
+      <p>Пенсионерам</p>
+    </div>
+    <div class="bg-black text-yellow-500 p-6 rounded-lg">
+      <h2 class="text-lg font-bold">Скидка 5%</h2>
+      <p>В День Рождения*</p>
+      <p class="text-sm">* Акция действует за 3 дня до и за 3 дня после дня рождения при предъявлении документа</p>
+    </div>
+    <div class="bg-black text-yellow-500 p-6 rounded-lg">
+      <h2 class="text-lg font-bold">Беспроцентная рассрочка</h2>
+      <p>Получай сейчас—плати потом</p>
+      <p class="text-sm">На 2 месяца!</p>
+    </div>
+  </div>
+  <div class="container flex-1 bg-zinc-200 p-6 rounded-lg ml-8">
+	<div class="header flex-1 bg-zinc-200 p-6 rounded-lg ml-8">
+	</div>
+
+	<div id="formContainer"></div>
+</div>
+  <template id="serviceFormTemplate">
+	<form class="flex-1 bg-zinc-200 p-6 rounded-lg ml-8" @submit.prevent="sendEmail">
+		<h2 class="text-lg font-bold mb-4">Заполните форму</h2>
+		<div class="form-group">
+			<label for="name">Ваше имя:</label>
+			    <input type="text" placeholder="Имя"  class="border border-zinc-400 p-2 mb-4 w-full rounded"/> 
+			<span class="error" id="nameError"></span>
+		</div>
+		<div class="form-group">
+			<label for="phone" >Номер телефона:</label>
+			<input type="tel" id="phone" name="phone" required type="tel" placeholder="Ваш телефон" class="border border-zinc-400 p-2 mb-4 w-full rounded">
+			<span class="error" id="phoneError"></span>
+		</div>
+		<div class="form-group">
+			<label for="service" >Выберите услугу:</label>
+			<select id="service" name="service" required class="border border-zinc-400 p-2 mb-4 w-full rounded" >
+				<option value="">Выберите...</option>
+				<option value="Химчистка">Химчистка</option>
+				<option value="Уборка">Уборка</option>
+				<option value="Мойка окон">Мойка окон</option>
+				<option value="Другое">Другое</option>
+			</select>
+			<span class="error" id="serviceError"></span>
+		</div>
+		<div class="form-group">
+			<label for="email">Ваш Email:</label>
+			<input type="email" id="email" name="email" required placeholder="Ваш Email" class="border border-zinc-400 p-2 mb-4 w-full rounded">
+			<span class="error" id="emailError"></span>
+		</div>
+		<div class="form-group">
+			<input id="submit" name="submit" type="submit" value="Отправить запрос" class="submit bg-yellow-500 text-black p-2 rounded hover:bg-yellow-400">
+		</div>
+	</form>
+</template>
+	<script src="js/emailjs.js"></script>
+	<script src="js/emailj.js"></script>
+	<script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init({
+        publicKey: "6ly8F3tTDCKSfbSSE",
+      });
+   })();
+</script>
+		<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+		<script>
+			function validate() {
+    let name = document.querySelector(".name")
+    let tel = document.querySelector(".phone")
+    let usluga = document.querySelector(".service")
+    let email = document.querySelector(".email")
+    let submit = document.querySelector(".submit");
+
+
+    submit.addEventListener("click", (e)=>{ success()
+        e.preventDefault()
+
+
+        if (name.value == "" || tel.value =="" || usluga.value == ""|| email.value == "") {
+inputempty();
+        }
+
+
+        else {
+sendemail()
+success();
+console.log("email sent")
+        }
+
+    })
+
+}
+validate()
+function sendemail() {
+    emailjs.send("service_ouy8aq4","template_s2cz87r",{
+    to_name: "Мастер Чист",
+    from_name: "Клиент",
+    reply_to: "",
+});
+}
+
+function success() {
+swal({
+title: "Отлично!",
+text: "В ближайшее время с вами свжуться!",
+icon: "success",
+button: "Закрыть",
+});
+}
+
+function error() {
+swal({
+title: "Ошибка!",
+text: "Попробуйте ещё раз",
+icon: "error",
+button: "Закрыть",
+});
+}
+
+function inputempty() {
+swal({
+title: "О нет!",
+text: "Вы не указали все данные",
+icon: "error",
+button: "Закрыть",
+});
+}
+		</script>
+  </form>
+</div>
+<footer class="bg-black text-foreground p-6">
+	<div
+		class="container mx-auto flex flex-col md:flex-row justify-between">
+		<div class="contact-info mb-6 md:mb-0">
+			<h2 class="text-lg font-bold text-white">Контактная
+				инфомация</h2>
+			<p class="text-white">г. Чайковский, Пр. Победы 12</p>
+			<p class="text-white">+7 (922) 641-61-11</p>
+			<p class="text-white">+7 (950) 817-09-03</p>
+			<p class="text-white">с 6:00 до 20:00 по Мск</p>
+			<div class="flex space-x-2 mt-2">
+				<a href="#"
+					class="text-muted-foreground hover:text-primary">
+					<img src="assets/соц.сети/vk_5968835.png" alt="VK"
+						class="w-6 h-6" />
+				</a>
+				<a href="#"
+					class="text-muted-foreground hover:text-primary">
+					<img src="assets/соц.сети/whatsapp_3536445.png"
+						alt="WhatsApp" class="w-6 h-6" />
+				</a>
+			</div>
+		</div>
+		<div class="navigation mb-6 md:mb-0">
+			<h2 class="text-lg font-bold text-white">Навигация</h2>
+			<ul class="space-y-1">
+				<li><a href="index.html"
+						class="text-muted-foreground hover:text-primary">Главная</a>
+				</li>
+				<li><a href="uslugi.html"
+						class="text-muted-foreground hover:text-primary">Услуги</a>
+				</li>
+				<li><a href="raboti.html"
+						class="text-muted-foreground hover:text-primary">До/После</a>
+				</li>
+				<li><a href="trud.html"
+						class="text-muted-foreground hover:text-primary">Трудоустройство</a>
+				</li>
+			</ul>
+		</div>
+		<div class="contact-form">
+			<h2 class="text-lg font-bold text-white">Задать вопрос</h2>
+			<form class="bg-card p-4 rounded-lg" >
+				<input type="text" placeholder="Напишите"
+					class="border border-border rounded-lg p-2 mb-2 w-full text-white" />
+				<input type="tel" placeholder="Ваш телефон"
+					class="border border-border rounded-lg p-2 mb-2 w-full text-white" />
+					
+				<button type="submit"
+					class="bg-secondary text-secondary-foreground hover:bg-secondary/80 rounded-lg p-2 w-full">Отправить</button>
+					<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init({
+        publicKey: "6ly8F3tTDCKSfbSSE",
+      });
+   })();
+</script>
+			</form>
+
+			  </script>
+		</div>
+	</div>
+</footer>
+  </body>
+</html>

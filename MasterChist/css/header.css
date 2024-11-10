@@ -1,0 +1,98 @@
+:root {
+    font-family: 'Arial', sans-serif;
+    font-feature-settings: 'liga' 1, 'calt' 1;
+    --background-color: #EDDB00;
+    --header-color: #474747;
+    --text-color: #fff;
+    --highlight-color: #FEEA98;
+}
+.content--header {
+    background-color: var(--header-color);
+    padding: 2.1rem 3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+.logo {
+    top: -7.6px;
+    position: absolute;
+    padding: 0;
+    margin: 0;
+    width: 5rem;
+    margin-left: 0.5rem;
+}
+
+.menu-btn {
+    display: none;
+    background-color: transparent;
+    border: none;
+    color: var(--text-color);
+    font-size: 1.5rem;
+    cursor: poArial;
+}
+
+.nav-cap, .ul-cap {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    margin-left: 10vw;
+}
+
+.nav-cap, .ul-cap, .li-cap {
+    margin-left: 4rem;
+    font-size: 1.2rem;
+}
+.li-cap-cap {
+    color: var(--text-color);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+.nav-cap, .ul-cap, .li-cap a {
+    color: var(--text-color);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.nav-cap, .ul-cap, .li-cap a:hover {
+    color: #cdcf28;
+}
+@media only screen and (max-width: 768px) {
+    .menu-btn {
+        display: block;
+    }
+
+    nav {
+        display: none;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        background-color: var(--header-color);
+        width: 100%;
+        text-align: center;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    nav.active {
+        display: block;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+}
+
+.number {
+    font-size: 1.25rem;
+    color: var(--highlight-color);
+    margin-right: 5vw;
+}

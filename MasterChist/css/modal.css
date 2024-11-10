@@ -1,0 +1,76 @@
+/* .modal, .modal-background {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1000;
+}
+.modal-background {
+    z-index: 40;
+    background- olor: rgba(10, 10, 10, 0.8);
+}
+.modal {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.modal-content {
+    z-index: 50;
+    background-color: white;
+    padding: 2em;
+} */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    background-color: #FFEC01;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 10%;
+    border-radius: 100px;
+    width: 36vw;
+    height: 20vw;
+    display: flex;
+    border: none;
+    box-shadow: #000 15px,15px,15px;
+    
+}
+.modal-input {
+    color: #000;
+    background-color: #FFEC01;
+    width: 20vw;
+    padding-left: 1vw;
+    padding-right: 1vw;
+    height: 2vw;
+    display: flex;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 40px;
+    border: solid #000 1px;
+    border-radius: 100px;
+    font-size: 40px;
+}
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Трудоустроиство</title>
+    <script src="js/3.4.js"></script>
+    <script src="js/unlazy.with-hashing.iife.js" defer init></script>
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/rabori.css">
+    <link rel="stylesheet" href="css/trud.css">
+    <script>
+        window.tailwind.config = {
+            darkMode: ['class'],
+            theme: {
+                extend: {
+                    colors: {
+                        muted: {
+                            DEFAULT: 'hsl(var(--muted))',
+                            foreground: 'hsl(var(--muted-foreground))'
+                        },
+                        card: {
+                            DEFAULT: 'hsl(var(--card))',
+                            foreground: 'hsl(var(--card-foreground))'
+                        },
+                    },
+                }
+            }
+        }
+    </script>
+    <style>
+    @layer base {
+        :root {
+--background: 0 0% 100%;
+--foreground: 240 10% 3.9%;
+--card: 0 0% 100%;
+--primary: 240 5.9% 10%;
+--muted-foreground: 240 3.8% 46.1%;
+        }
+    }
+</style>
+</head>
+<body>
+    <header class="content--header">
+        <div class="logo">
+            <img class="logo"
+                src="assets/masterchist-fotor-bg-remover-2024071361140.png"
+                alt="лого">
+        </div>
+        <button class="menu-btn" onclick="toggleMenu()">Menu</button>
+        <nav class="nav-cap">
+            <ul class="ul-cap">
+                <li class="li-cap"><a href="index.html">Главная</a></li>
+                <li class="li-cap"><a href="uslugi.html">Услуги</a></li>
+                <li class="li-cap"><a href="raboti.html">До/После</a></li>
+                <li class="li-cap"><a href="skidki.html">Скидки</a></li>
+                <li class="li-cap"><a href="trud.html">Трудоустройство</a></li>
+            </ul>
+        </nav>
+        <P class="number" href="tel:+79226416111">+7 (922) 641-61-11</P>
+    </header>
+    <div class="flex flex-col items-center justify-start h-screen bg-yellow-400 p-8">
+        <h1 class="text-4xl font-bold text-black font-ArialVariable-sans-serif">Свободные вакансии</h1>
+        <div class="mt-4 flex items-center justify-center">
+          <p class="text-lg text-zinc-800 text-center">Свободных вакансий пока нет</p>
+          <img aria-hidden="true" alt="search-icon" src="https://openui.fly.dev/openui/24x24.svg?text=🔍" class="inline-block ml-2" />
+        </div>
+      </div>
+      <template>
+        <form ref="form" @submit.prevent="sendEmail">
+          <label>Name</label>
+          <input type="text" name="user_name">
+          <label>Email</label>
+          <input type="email" name="user_email">
+          <label>Message</label>
+          <textarea name="message"></textarea>
+          <input type="submit" value="Send">
+        </form>
+      </template>
+      
+      <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+      <script src="js/emailjs.js"></script>
+
+      <footer class="bg-black text-foreground p-6">
+        <div
+            class="container mx-auto flex flex-col md:flex-row justify-between">
+            <div class="contact-info mb-6 md:mb-0">
+                <h2 class="text-lg font-ArialVariable-sans-serif text-white">Контактная
+                    инфомация</h2>
+                <p class="text-white font-ArialVariable-sans-serif">г. Чайковский, Пр. Победы 12</p>
+                <p class="text-white font-ArialVariable-sans-serif">+7 (922) 641-61-11</p>
+                <p class="text-white font-ArialVariable-sans-serif">+7 (950) 817-09-03</p>
+                <p class="text-white font-ArialVariable-sans-serif">с 6:00 до 20:00 по Мск</p>
+                <div class="flex space-x-2 mt-2 font-ArialVariable-sans-serif">
+                    <a href="#"
+                        class="text-muted-foreground hover:text-primary">
+                        <img src="assets/соц.сети/vk_5968835.png" alt="VK"
+                            class="w-6 h-6" />
+                    </a>
+                    <a href="#"
+                        class="text-muted-foreground hover:text-primary">
+                        <img src="assets/соц.сети/whatsapp_3536445.png"
+                            alt="WhatsApp" class="w-6 h-6" />
+                    </a>
+                </div>
+            </div>
+            <div class="navigation mb-6 md:mb-0">
+                <h2 class="text-lg font-ArialVariable-sans-serif text-white">Навигация</h2>
+                <ul class="space-y-1">
+                    <li><a href="index.html"
+                            class="text-muted-foreground hover:text-primary font-ArialVariable-sans-serif">Главная</a>
+                    </li>
+                    <li><a href="uslugi.html"
+                            class="text-muted-foreground hover:text-primary font-ArialVariable-sans-serif ">Услуги</a>
+                    </li>
+                    <li><a href="raboti.html"
+                            class="text-muted-foreground hover:text-primary font-ArialVariable-sans-serif">До/После</a>
+                    </li>
+                    <li><a href="skidki.html"
+                            class="text-muted-foreground hover:text-primary font-ArialVariable-sans-serif">Скидки</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="contact-form">
+                <h2 class="text-lg font-ArialVariable-sans-serif text-white">Задать вопрос</h2>
+                <form class="bg-card p-4 rounded-lg" >
+                    <input type="text" placeholder="Напишите"
+                        class="border border-border rounded-lg p-2 mb-2 w-full text-white" />
+                    <input type="tel" placeholder="Ваш телефон"
+                        class="border border-border rounded-lg p-2 mb-2 w-full text-white" />
+                    <button type="submit"
+                        class="bg-secondary text-secondary-foreground hover:bg-secondary/80 rounded-lg p-2 w-full">Отправить</button>
+                </form>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

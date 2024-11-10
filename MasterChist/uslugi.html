@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Услуги</title>
+</head>
+<body>
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/header.css">
+        <link rel="stylesheet" href="css/uslugi.css">
+        <script src="js/3.4.js"></script>
+        <script src="js/unlazy.with-hashing.iife.js" defer init></script>
+        <script>
+            window.tailwind.config = {
+                darkMode: ['class'],
+                theme: {
+                    extend: {
+                        colors: {
+                            border: 'hsl(var(--border))',
+                            input: 'hsl(var(--input))',
+                            ring: 'hsl(var(--ring))',
+                            background: 'hsl(var(--background))',
+                            foreground: 'hsl(var(--foreground))',
+                            primary: {
+                                DEFAULT: 'hsl(var(--primary))',
+                                foreground: 'hsl(var(--primary-foreground))'
+                            },
+                            secondary: {
+                                DEFAULT: 'hsl(var(--secondary))',
+                                foreground: 'hsl(var(--secondary-foreground))'
+                            },
+                            destructive: {
+                                DEFAULT: 'hsl(var(--destructive))',
+                                foreground: 'hsl(var(--destructive-foreground))'
+                            },
+                            muted: {
+                                DEFAULT: 'hsl(var(--muted))',
+                                foreground: 'hsl(var(--muted-foreground))'
+                            },
+                            accent: {
+                                DEFAULT: 'hsl(var(--accent))',
+                                foreground: 'hsl(var(--accent-foreground))'
+                            },
+                            popover: {
+                                DEFAULT: 'hsl(var(--popover))',
+                                foreground: 'hsl(var(--popover-foreground))'
+                            },
+                            card: {
+                                DEFAULT: 'hsl(var(--card))',
+                                foreground: 'hsl(var(--card-foreground))'
+                            },
+                        },
+                    }
+                }
+            }
+        </script>
+        <style type="text/tailwindcss">
+            @layer base {
+				:root {
+--background: 0 0% 100%;
+--foreground: 240 10% 3.9%;
+--card: 0 0% 100%;
+--card-foreground: 240 10% 3.9%;
+--popover: 0 0% 100%;
+--popover-foreground: 240 10% 3.9%;
+--primary: 240 5.9% 10%;
+--primary-foreground: 0 0% 98%;
+--secondary: 240 4.8% 95.9%;
+--secondary-foreground: 240 5.9% 10%;
+--muted: 240 4.8% 95.9%;
+--muted-foreground: 240 3.8% 46.1%;
+--accent: 240 4.8% 95.9%;
+--accent-foreground: 240 5.9% 10%;
+--destructive: 0 84.2% 60.2%;
+--destructive-foreground: 0 0% 98%;
+--border: 240 5.9% 90%;
+--input: 240 5.9% 90%;
+--ring: 240 5.9% 10%;
+--radius: 0.5rem;
+				}
+				.dark {
+--foreground: 0 0% 98%;
+--card: 240 10% 3.9%;
+--card-foreground: 0 0% 98%;
+--popover: 240 10% 3.9%;
+--popover-foreground: 0 0% 98%;
+--primary: 0 0% 98%;
+--primary-foreground: 240 5.9% 10%;
+--secondary: 240 3.7% 15.9%;
+--secondary-foreground: 0 0% 98%;
+--muted: 240 3.7% 15.9%;
+--muted-foreground: 240 5% 64.9%;
+--accent: 240 3.7% 15.9%;
+--accent-foreground: 0 0% 98%;
+--destructive: 0 62.8% 30.6%;
+--destructive-foreground: 0 0% 98%;
+--border: 240 3.7% 15.9%;
+--input: 240 3.7% 15.9%;
+--ring: 240 4.9% 83.9%;
+				}
+			}
+		</style>
+    </head>
+    <body>
+        <header class="content--header">
+            <div class="logo">
+                <img class="logo"
+                    src="assets/masterchist-fotor-bg-remover-2024071361140.png"
+                    alt="лого">
+            </div>
+            <button class="menu-btn" onclick="toggleMenu()">Menu</button>
+            <nav class="nav-cap">
+                <ul class="ul-cap">
+                    <li class="li-cap"><a href="index.html">Главная</a></li>
+                    <li class="li-cap"><a href="uslugi.html">Услуги</a></li>
+                    <li class="li-cap"><a href="raboti.html">До/После</a></li>
+                    <li class="li-cap"><a href="skidki.html">Скидки</a></li>
+                    <li class="li-cap"><a href="trud.html">Трудоустройство</a></li>
+                </ul>
+            </nav>
+            <P class="number" href="tel:+79226416111">+7 (922) 641-61-11</P>
+        </header>
+        <div class="bg-yellow-50 p-8">
+            <h1 class="text-3xl font-bold font-Roboto text-center mb-6">Химчистка</h1>
+            <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-6 ">
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden transition-transform transform hover:scale-105">
+                    <img src="assets/хим/мягкая мебель.png" alt="Мягкая мебель"
+                        class="w-full h-48 object-cover" />
+                    <div class="p-4">
+                        <h2 class="text-lg font-semibold">Мягкая мебель</h2>
+                        <div class="mt-4">
+                            <button
+                                class="bg-secondary text-secondary-foreground hover:bg-secondary/80 px-4 py-2 rounded">Подробнее</button>
+                            <button
+                                class="bg-primary text-primary-foreground hover:bg-primary/80 px-4 py-2 rounded ml-2">Заказать</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden transition-transform transform hover:scale-105">
+                    <img src="assets/хим/ковры.png" alt="Ковры и ковролины"
+                        class="w-full h-48 object-cover" />
+                    <div class="p-4">
+                        <h2 class="text-lg font-semibold">Ковры и ковролины</h2>
+                        <div class="mt-4">
+                            <button
+                                class="bg-secondary text-secondary-foreground hover:bg-secondary/80 px-4 py-2 rounded">Подробнее</button>
+                            <button
+                                class="bg-primary text-primary-foreground hover:bg-primary/80 px-4 py-2 rounded ml-2">Заказать</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden transition-transform transform hover:scale-105">
+                    <img src="assets/хим/мягкие игрушки.png"
+                        alt="Мягкие игрушки" class="w-full h-48 object-cover" />
+                    <div class="p-4">
+                        <h2 class="text-lg font-semibold">Мягкие игрушки</h2>
+                        <div class="mt-4">
+                            <button
+                                class="bg-secondary text-secondary-foreground hover:bg-secondary/80 px-4 py-2 rounded">Подробнее</button>
+                            <button
+                                class="bg-primary text-primary-foreground hover:bg-primary/80 px-4 py-2 rounded ml-2">Заказать</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden transition-transform transform hover:scale-105">
+                    <img src="assets/хим/салоны авто.png" alt="Матрасы"
+                        class="w-full h-48 object-cover" />
+                    <div class="p-4">
+                        <h2 class="text-lg font-semibold">Матрасы</h2>
+                        <div class="mt-4">
+                            <button
+                                class="bg-secondary text-secondary-foreground hover:bg-secondary/80 px-4 py-2 rounded">Подробнее</button>
+                            <button
+                                class="bg-primary text-primary-foreground hover:bg-primary/80 px-4 py-2 rounded ml-2">Заказать</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden transition-transform transform hover:scale-105">
+                    <img src="assets/хим/салоны авто.png" alt="Салоны авто"
+                        class="w-full h-48 object-cover" />
+                    <div class="p-4">
+                        <h2 class="text-lg font-semibold">Салоны авто</h2>
+                        <div class="mt-4">
+                            <button
+                                class="bg-secondary text-secondary-foreground hover:bg-secondary/80 px-4 py-2 rounded">Подробнее</button>
+                            <button
+                                class="bg-primary text-primary-foreground hover:bg-primary/80 px-4 py-2 rounded ml-2">Заказать</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden transition-transform transform hover:scale-105">
+                    <img src="assets/хим/подушки.png" alt="Подушки"
+                        class="w-full h-48 object-cover" />
+                    <div class="p-4">
+                        <h2 class="text-lg font-semibold">Подушки</h2>
+                        <div class="mt-4">
+                            <button
+                                class="bg-secondary text-secondary-foreground hover:bg-secondary/80 px-4 py-2 rounded">Подробнее</button>
+                            <button
+                                class="bg-primary text-primary-foreground hover:bg-primary/80 px-4 py-2 rounded ml-2">Заказать</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="bg-yellow-50 p-8">
+            <h1 class="text-3xl font-bold font-Arialbold text-center mb-6">Уборка</h1>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden transition-transform transform hover:scale-105">
+                    <img src="assets/уборка/поддерживающая.png"
+                        alt="Мягкая мебель" class="w-full h-48 object-cover" />
+                    <div class="p-4">
+                        <h2 class="text-lg font-semibold">Поддерживающая</h2>
+                        <div class="mt-4">
+                            <button
+                                class="bg-secondary text-secondary-foreground hover:bg-secondary/80 px-4 py-2 rounded">Подробнее</button>
+                            <button
+                                class="bg-primary text-primary-foreground hover:bg-primary/80 px-4 py-2 rounded ml-2">Заказать</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden transition-transform transform hover:scale-105">
+                    <img src="assets/уборка/генеральная.png"
+                        alt="Ковры и ковролины"
+                        class="w-full h-48 object-cover" />
+                    <div class="p-4">
+                        <h2 class="text-lg font-semibold">Генеральная</h2>
+                        <div class="mt-4">
+                            <button
+                                class="bg-secondary text-secondary-foreground hover:bg-secondary/80 px-4 py-2 rounded">Подробнее</button>
+                            <button
+                                class="bg-primary text-primary-foreground hover:bg-primary/80 px-4 py-2 rounded ml-2">Заказать</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden transition-transform transform hover:scale-105">
+                    <img src="assets/уборка/после ремонта.png"
+                        alt="Мягкие игрушки" class="w-full h-48 object-cover" />
+                    <div class="p-4">
+                        <h2 class="text-lg font-semibold">После ремонта</h2>
+                        <div class="mt-4">
+                            <button
+                                class="bg-secondary text-secondary-foreground hover:bg-secondary/80 px-4 py-2 rounded">Подробнее</button>
+                            <button
+                                class="bg-primary text-primary-foreground hover:bg-primary/80 px-4 py-2 rounded ml-2">Заказать</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden transition-transform transform hover:scale-105">
+                    <img src="assets/уборка/после трупа.png" alt="Матрасы"
+                        class="w-full h-48 object-cover" />
+                    <div class="p-4">
+                        <h2 class="text-lg font-semibold">После трупа</h2>
+                        <div class="mt-4">
+                            <button
+                                class="bg-secondary text-secondary-foreground hover:bg-secondary/80 px-4 py-2 rounded">Подробнее</button>
+                            <button
+                                class="bg-primary text-primary-foreground hover:bg-primary/80 px-4 py-2 rounded ml-2">Заказать</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden transition-transform transform hover:scale-105">
+                    <img src="assets/уборка/после дезинфекции.png"
+                        alt="Салоны авто" class="w-full h-48 object-cover" />
+                    <div class="p-4">
+                        <h2 class="text-lg font-semibold">После дезинфекции</h2>
+                        <div class="mt-4">
+                            <button
+                                class="bg-secondary text-secondary-foreground hover:bg-secondary/80 px-4 py-2 rounded">Подробнее</button>
+                            <button
+                                class="bg-primary text-primary-foreground hover:bg-primary/80 px-4 py-2 rounded ml-2">Заказать</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden transition-transform transform hover:scale-105">
+                    <img src="assets/уборка/после пожара.png" alt="Подушки"
+                        class="w-full h-48 object-cover" />
+                    <div class="p-4">
+                        <h2 class="text-lg font-semibold">После пожара</h2>
+                        <div class="mt-4">
+                            <button
+                                class="bg-secondary text-secondary-foreground hover:bg-secondary/80 px-4 py-2 rounded">Подробнее</button>
+                            <button
+                                class="bg-primary text-primary-foreground hover:bg-primary/80 px-4 py-2 rounded ml-2">Заказать</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="bg-yellow-50 p-8">
+            <h1 class="text-3xl font-bold font-Arialbold text-center mb-6">Мойка окон</h1>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden transition-transform transform hover:scale-105">
+                    <img src="assets/Мойка окон/окна.png" alt="Мягкая мебель"
+                        class="w-full h-48 object-cover" />
+                    <div class="p-4">
+                        <h2 class="text-lg font-semibold">Окна</h2>
+                        <div class="mt-4">
+                            <button
+                                class="bg-secondary text-secondary-foreground hover:bg-secondary/80 px-4 py-2 rounded">Подробнее</button>
+                            <button
+                                class="bg-primary text-primary-foreground hover:bg-primary/80 px-4 py-2 rounded ml-2">Заказать</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden transition-transform transform hover:scale-105">
+                    <img src="assets/Мойка окон/балконы.png"
+                        alt="Ковры и ковролины"
+                        class="w-full h-48 object-cover" />
+                    <div class="p-4">
+                        <h2 class="text-lg font-semibold">Балконы и лоджии</h2>
+                        <div class="mt-4">
+                            <button
+                                class="bg-secondary text-secondary-foreground hover:bg-secondary/80 px-4 py-2 rounded">Подробнее</button>
+                            <button
+                                class="bg-primary text-primary-foreground hover:bg-primary/80 px-4 py-2 rounded ml-2">Заказать</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden transition-transform transform hover:scale-105">
+                    <img src="assets/Мойка окон/витрины.png"
+                        alt="Мягкие игрушки" class="w-full h-48 object-cover" />
+                    <div class="p-4">
+                        <h2 class="text-lg font-semibold">Витрины</h2>
+                        <div class="mt-4">
+                            <button
+                                class="bg-secondary text-secondary-foreground hover:bg-secondary/80 px-4 py-2 rounded">Подробнее</button>
+                            <button
+                                class="bg-primary text-primary-foreground hover:bg-primary/80 px-4 py-2 rounded ml-2">Заказать</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden transition-transform transform hover:scale-105">
+                    <img src="assets/Мойка окон/москитные сетки.png"
+                        alt="Матрасы" class="w-full h-48 object-cover" />
+                    <div class="p-4">
+                        <h2 class="text-lg font-semibold">Москитные сетки</h2>
+                        <div class="mt-4">
+                            <button
+                                class="bg-secondary text-secondary-foreground hover:bg-secondary/80 px-4 py-2 rounded">Подробнее</button>
+                            <button
+                                class="bg-primary text-primary-foreground hover:bg-primary/80 px-4 py-2 rounded ml-2">Заказать</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden transition-transform transform hover:scale-105">
+                    <img src="assets/Мойка окон/Жалюзи.png" alt="Салоны авто"
+                        class="w-full h-48 object-cover" />
+                    <div class="p-4">
+                        <h2 class="text-lg font-semibold">Жалюзи</h2>
+                        <div class="mt-4">
+                            <button
+                                class="bg-secondary text-secondary-foreground hover:bg-secondary/80 px-4 py-2 rounded">Подробнее</button>
+                            <button
+                                class="bg-primary text-primary-foreground hover:bg-primary/80 px-4 py-2 rounded ml-2">Заказать</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="bg-yellow-50 p-8">
+            <h1 class="text-3xl font-bold font-arial text-center mb-6">Другое</h1>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden transition-transform transform hover:scale-105">
+                    <img src="assets/другое/мойка фасадов.png"
+                        alt="Мягкая мебель" class="w-full h-48 object-cover" />
+                    <div class="p-4 ">
+                        <h2 class="text-lg font-semibold">Мойка фасадов</h2>
+                        <div class="mt-4">
+                            <button
+                                class="bg-secondary text-secondary-foreground hover:bg-secondary/80 px-4 py-2 rounded">Подробнее</button>
+                            <button
+                                class="bg-primary text-primary-foreground hover:bg-primary/80 px-4 py-2 rounded ml-2">Заказать</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden transition-transform transform hover:scale-105">
+                    <img src="assets/другое/чистка суден.png"
+                        alt="Ковры и ковролины"
+                        class="w-full h-48 object-cover" />
+                    <div class="p-4">
+                        <h2 class="text-lg font-semibold">Чистка суден</h2>
+                        <div class="mt-4">
+                            <button
+                                class="bg-secondary text-secondary-foreground hover:bg-secondary/80 px-4 py-2 rounded">Подробнее</button>
+                            <button
+                                class="bg-primary text-primary-foreground hover:bg-primary/80 px-4 py-2 rounded ml-2">Заказать</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden transition-transform transform hover:scale-105">
+                    <img src="assets/другое/Крупные объекты.png"
+                        alt="Мягкие игрушки" class="w-full h-48 object-cover" />
+                    <div class="p-4">
+                        <h2 class="text-lg font-semibold">Крупные объекты</h2>
+                        <div class="mt-4">
+                            <button
+                                class="bg-secondary text-secondary-foreground hover:bg-secondary/80 px-4 py-2 rounded">Подробнее</button>
+                            <button
+                                class="bg-primary text-primary-foreground hover:bg-primary/80 px-4 py-2 rounded ml-2">Заказать</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden transition-transform transform hover:scale-105">
+                    <img src="assets/другое/Мойка вывесок.png" alt="Матрасы"
+                        class="w-full h-48 object-cover" />
+                    <div class="p-4">
+                        <h2 class="text-lg font-semibold">Мойка вывесок</h2>
+                        <div class="mt-4">
+                            <button
+                                class="bg-secondary text-secondary-foreground hover:bg-secondary/80 px-4 py-2 rounded">Подробнее</button>
+                            <button
+                                class="bg-primary text-primary-foreground hover:bg-primary/80 px-4 py-2 rounded ml-2">Заказать</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script>
+            const SERVICE_CARD_CLASSES =
+                "bg-white rounded-lg shadow-lg overflow-hidden";
+            const BUTTON_CLASSES = "px-4 py-2 rounded";
+            const BUTTON_SECONDARY_CLASSES =
+                "bg-secondary text-secondary-foreground hover:bg-secondary/80";
+            const BUTTON_PRIMARY_CLASSES =
+                "bg-primary text-primary-foreground hover:bg-primary/80";
+            const ServiceCard = {
+                props: {
+                    title: String,
+                    image: String,
+                    alt: String
+                },
+                template: `
+                <div class="${SERVICE_CARD_CLASSES}">
+                  <img :src="image" :alt="alt" class="w-full h-48 object-cover" />
+                  <div class="p-4">
+                    <h2 class="text-lg font-semibold">{{ title }}</h2>
+                    <div class="mt-4">
+                      <button class="${BUTTON_SECONDARY_CLASSES} ${BUTTON_CLASSES}">Подробнее</button>
+                      <button class="${BUTTON_PRIMARY_CLASSES} ${BUTTON_CLASSES} ml-2">Заказать</button>
+                    </div>
+                  </div>
+                </div>
+              `
+            };
+            export default {
+                components: {
+                    ServiceCard
+                }
+            };
+        </script>
+        <footer class="bg-black text-foreground p-6">
+            <div
+                class="container mx-auto flex flex-col md:flex-row justify-between">
+                <div class="contact-info mb-6 md:mb-0">
+                    <h2 class="text-lg font-ArialVariable-sans-serif text-white">Контактная
+                        инфомация</h2>
+                    <p class="text-white font-ArialVariable-sans-serif">г. Чайковский, Пр. Победы 12</p>
+                    <p class="text-white font-ArialVariable-sans-serif">+7 (922) 641-61-11</p>
+                    <p class="text-white font-ArialVariable-sans-serif">+7 (950) 817-09-03</p>
+                    <p class="text-white font-ArialVariable-sans-serif">с 6:00 до 20:00 по Мск</p>
+                    <div class="flex space-x-2 mt-2 font-ArialVariable-sans-serif">
+                        <a href="#"
+                            class="text-muted-foreground hover:text-primary">
+                            <img src="assets/соц.сети/vk_5968835.png" alt="VK"
+                                class="w-6 h-6" />
+                        </a>
+                        <a href="#"
+                            class="text-muted-foreground hover:text-primary">
+                            <img src="assets/соц.сети/whatsapp_3536445.png"
+                                alt="WhatsApp" class="w-6 h-6" />
+                        </a>
+                    </div>
+                </div>
+                <div class="navigation mb-6 md:mb-0">
+                    <h2 class="text-lg font-ArialVariable-sans-serif text-white">Навигация</h2>
+                    <ul class="space-y-1">
+                        <li><a href="index.html"
+                                class="text-muted-foreground hover:text-primary font-ArialVariable-sans-serif">Главная</a>
+                        </li>
+                        <li><a href="raboti.html"
+                                class="text-muted-foreground hover:text-primary font-ArialVariable-sans-serif ">До/После</a>
+                        </li>
+                        <li><a href="skidki.html"
+                                class="text-muted-foreground hover:text-primary font-ArialVariable-sans-serif">Скидки</a>
+                        </li>
+                        <li><a href="trud.html"
+                                class="text-muted-foreground hover:text-primary font-ArialVariable-sans-serif">Трудоустройство</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="contact-form">
+                    <h2 class="text-lg font-ArialVariable-sans-serif text-white">Задать вопрос</h2>
+                    <form class="bg-card p-4 rounded-lg">
+                        <input type="text" placeholder="Напишите"
+                            class="border border-border rounded-lg p-2 mb-2 w-full text-white" />
+                        <input type="tel" placeholder="Ваш телефон"
+                            class="border border-border rounded-lg p-2 mb-2 w-full text-white" />
+                        <button type="submit"
+                            class="bg-secondary text-secondary-foreground hover:bg-secondary/80 rounded-lg p-2 w-full">Отправить</button>
+                    </form>
+                </div>
+            </div>
+        </footer>
+    </body>
+    </html>
+</body>
+</html>

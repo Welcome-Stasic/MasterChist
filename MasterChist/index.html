@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MasterChist</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/modal.css">
+    <link rel="stylesheet" href="css/header.css">
+        <script src="js/3.4.js"></script>
+        <script src="js/unlazy.with-hashing.iife.js" defer init></script>
+        <link rel="stylesheet" href="css/header.css">
+        <link rel="stylesheet" href="css/rabori.css">
+        <script>
+            window.tailwind.config = {
+                darkMode: ['class'],
+                theme: {
+                    extend: {
+                        colors: {
+                            muted: {
+                                DEFAULT: 'hsl(var(--muted))',
+                                foreground: 'hsl(var(--muted-foreground))'
+                            },
+                            card: {
+                                DEFAULT: 'hsl(var(--card))',
+                                foreground: 'hsl(var(--card-foreground))'
+                            },
+                        },
+                    }
+                }
+            }
+        </script>
+        <style>
+        @layer base {
+            :root {
+    --background: 0 0% 100%;
+    --foreground: 240 10% 3.9%;
+    --card: 0 0% 100%;
+    --primary: 240 5.9% 10%;
+    --muted-foreground: 240 3.8% 46.1%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="content--header">
+        <div class="logo">
+            <img class="logo"
+                src="assets/masterchist-fotor-bg-remover-2024071361140.png"
+                alt="лого">
+        </div>
+        <button class="menu-btn" onclick="toggleMenu()">Menu</button>
+        <nav class="nav-cap">
+            <ul class="ul-cap">
+                <li class="li-cap"><a href="index.html">Главная</a></li>
+                <li class="li-cap"><a href="uslugi.html">Услуги</a></li>
+                <li class="li-cap"><a href="raboti.html">До/После</a></li>
+                <li class="li-cap"><a href="skidki.html">Скидки</a></li>
+                <li class="li-cap"><a href="trud.html">Трудоустройство</a></li>
+            </ul>
+        </nav>
+        <P class="number" href="tel:+79226416111">+7 (922) 641-61-11</P>
+    </header>
+    <div class="modal" id="modal">
+        <div class="modal-content">
+            <span class="close" id="close">&times;</span>
+            <h2>Оставить заявку</h2>
+            <form id="form">
+                <input class='modal-input' type="text" id="name"
+                    placeholder="Имя">
+                <input class='modal-input' list='services' id="service"
+                    placeholder="Услуга">
+                <datalist id='services'>
+                    <option value='Химчистка'>
+                    <option value='Уборка'>
+                    <option value='Мойка окон'>
+                </datalist>
+                <input class='modal-input' type="tel" id="phone"
+                    placeholder="Номер телефона">
+                <button type="submit">Отправить</button>
+            </form>
+        </div>
+    </div>
+    <section class="main">
+        <object class="oval">
+        </object>
+        <img class="logo--head"
+            src="assets/masterchist-fotor-bg-remover-2024071361140.png"
+            alt="лого">
+        <div class="head--text">
+            <p class="head--title">ООО "МастерЧист"</p>
+            <p class="head--subtitle">Клининговая компания</p>
+        </div>
+        <div class="section--dark">
+            <div class="dark1">
+                <p class="dark1--opit">С 2014 года</p>
+                <p class="dark1--opit-opit">Опыт</p>
+            </div>
+            <div class="dark2">
+                <p class="dark2--opit">>50тыс.</p>
+                <p class="dark2--opit-opit">Довольных клиентов</p>
+            </div>
+        </div>
+        <div class="dark3">
+            <p class="dark3--opit">1180+</p>
+            <p class="dark3--opit-opit">Уборок в год</p>
+        </div>
+        <div class="dark4">
+            <p class="dark4--opit"> 0%</p>
+            <p class="dark4--opit-opit">Рассрочка</p>
+        </div>
+        <button @click="OpenModal" class="buttom--effect">Оставить
+            заявку<button>
+    </section>
+    <!--
+    <div class="modal" v-if="modalOpened">
+        <div @ckick="closeModal" class="modal-background">
+        </div>
+        <div class="modal-content">Content</div>
+    </div> 
+    -->
+    <script src="js/modal.js">
+    </script>
+    <section class="onas">
+        <h class="section_onas--title">О нас</h>
+        <div class="info--onas">
+            <p class="info--onas-one">Представляем вам нашу клининговую
+                компанию, где чистота и профессионализм на первом уровне!<br> Мы
+                не
+                просто убираем, мы преображаем ваши пространства, делая их
+                сияющими и уютными.<br> Наши специалисты используют только
+                профессиональное оборудование и средства ведущих брендов.<br>
+                .Большой опыт, работаем с 2014 г., чистим качественно, тщательно
+                на результат!<br> Работаем официально, документы оформляем, чеки
+                выдаём</p>
+            <p class="info--onas-two">Помимо частных заказов мы оказывем услуги
+                крупным объектам: киноцентрам,<br> офисным помещениям, складам и
+                так
+                далее...</p>
+            <p class="info--onas-three">У нас отличный сервис и ответственный
+                подход, работаем без выходных с 6:00 до 20:00 по МСК<br> (при
+                договорённости возможны выезды в любое (и ночное) время).<br>
+                Доверьтесь нам, и мы превратим рутинную уборку в настоящее
+                искусство. С нами - всегда чисто,<br> всегда комфортно!</p>
+        </div>
+        <object class="oval-two">
+        </object>
+        <div class="head--text">
+            <img class="logo--onas"
+                src="assets/masterchist-fotor-bg-remover-2024071361140.png"
+                alt="лого">
+            <h class="section_onas--goroda">Наши города</h>
+            <ul class="ul-onas">
+                <li class="li-onas">Чайковский</li>
+                <li class="li-onas">Воткинск</li>
+                <li class="li-onas">Шаркан</li>
+                <li class="li-onas">Ижевск</li>
+                <li class="li-onas">Близлежащие населённые пункты</li>
+            </ul>
+    </section>
+    <section class="form">
+        <img class="shvabra" src="assets/100024915365b4.png" alt="Швабра">
+        <div class="section__lable-lable">
+            <input class="lable-section" placeholder="Имя"></input>
+            <label for='input_element'></label>
+            <input list='options' class='lable-section' name='input_name'
+                placeholder="Интересующая услуга">
+            <datalist id='options'>
+                <option value='Химчистка'>
+                <option value='Уборка'>
+                <option value='Мойка окон'>
+            </datalist>
+            <label>
+                <input class="lable-section" placeholder="Ваш телефон"></input>
+            </label>
+            <button class="button--Lable">Отправить</button>
+        </div>
+    </section>
+    <footer class="bg-black text-foreground p-6">
+        <div
+            class="container mx-auto flex flex-col md:flex-row justify-between">
+            <div class="contact-info mb-6 md:mb-0">
+                <h2 class="text-lg font-ArialVariable-sans-serif text-white">Контактная
+                    инфомация</h2>
+                <p class="text-white font-ArialVariable-sans-serif">г. Чайковский, Пр. Победы 12</p>
+                <p class="text-white font-ArialVariable-sans-serif">+7 (922) 641-61-11</p>
+                <p class="text-white font-ArialVariable-sans-serif">+7 (950) 817-09-03</p>
+                <p class="text-white font-ArialVariable-sans-serif">с 6:00 до 20:00 по Мск</p>
+                <div class="flex space-x-2 mt-2 font-ArialVariable-sans-serif">
+                    <a href="#"
+                        class="text-muted-foreground hover:text-primary">
+                        <img src="assets/соц.сети/vk_5968835.png" alt="VK"
+                            class="w-6 h-6" />
+                    </a>
+                    <a href="#"
+                        class="text-muted-foreground hover:text-primary">
+                        <img src="assets/соц.сети/whatsapp_3536445.png"
+                            alt="WhatsApp" class="w-6 h-6" />
+                    </a>
+                </div>
+            </div>
+            <div class="navigation mb-6 md:mb-0">
+                <h2 class="text-lg font-ArialVariable-sans-serif text-white">Навигация</h2>
+                <ul class="space-y-1">
+                    <li><a href="uslugi.html"
+                            class="text-muted-foreground hover:text-primary font-ArialVariable-sans-serif">Услуги</a>
+                    </li>
+                    <li><a href="raboti.html"
+                            class="text-muted-foreground hover:text-primary font-ArialVariable-sans-serif ">До/После</a>
+                    </li>
+                    <li><a href="skidki.html"
+                            class="text-muted-foreground hover:text-primary font-ArialVariable-sans-serif">Скидки</a>
+                    </li>
+                    <li><a href="trud.html"
+                            class="text-muted-foreground hover:text-primary font-ArialVariable-sans-serif">Трудоустройство</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="contact-form">
+                <h2 class="text-lg font-ArialVariable-sans-serif text-white">Задать вопрос</h2>
+                <form class="bg-card p-4 rounded-lg">
+                    <input type="text" placeholder="Напишите"
+                        class="border border-border rounded-lg p-2 mb-2 w-full text-white" />
+                    <input type="tel" placeholder="Ваш телефон"
+                        class="border border-border rounded-lg p-2 mb-2 w-full text-white" />
+                    <button type="submit"
+                        class="bg-secondary text-secondary-foreground hover:bg-secondary/80 rounded-lg p-2 w-full">Отправить</button>
+                </form>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
