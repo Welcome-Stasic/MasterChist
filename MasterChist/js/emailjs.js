@@ -6,8 +6,8 @@ function showForm() {
     formContainer.appendChild(formClone);
 
     const form = formContainer.querySelector('.serviceForm');
-    form.addEventListener('submit', function(event) {
-        event.preventDefault(); 
+    form.addEventListener('click', (event) => {
+        event.preventDefault();
 
         let isValid = true;
 
@@ -20,7 +20,7 @@ function showForm() {
         }
 
         const phone = form.querySelector('#phone').value.trim();
-        const phoneRegex = /^[+]?\d{10,15}$/; 
+        const phoneRegex = /^[+]?\d{10,15}$/;
         if (!phone || !phoneRegex.test(phone)) {
             form.querySelector('#phoneError').textContent = "Пожалуйста, введите корректный номер телефона.";
             isValid = false;
@@ -48,66 +48,84 @@ function showForm() {
         if (isValid) {
             alert("Ваш запрос отправлен успешно!");
 
-            form.reset(); 
+            form.reset();
         }
     });
 }
-
-
 window.onload = showForm;
-/*function validate() {
-    let name = document.querySelector("name")
-    let tel = document.querySelector("phone")
-    let usluga = document.querySelector("service")
-    let email = document.querySelector("email");
-    let submit = document.querySelector("submit")
+function validate() {
+    let name = document.querySelector(".name")
+    let tel = document.querySelector(".phone")
+    let usluga = document.querySelector(".service")
+    let email = document.querySelector(".email")
+    var submit = document.querySelector(".submit");
 
-    submit.addEventListener("click", (e)=>{
+
+    submit.addEventListener("click", (e) => {
+        success()
         e.preventDefault()
 
-        if (name.value == "" || tel.value =="" || usluga.value == ""|| email.value == "") {
-inputempty();
-        }
-        else {
-sendemail()
-success();
-console.log("email sent")
 
+        if (name.value == "" || tel.value == "" || usluga.value == "" || email.value == "") {
+            inputempty();
         }
+
+
+        else {
+            sendemail()
+            success();
+            console.log("email sent")
+        }
+
     })
+
 }
 validate()
 function sendemail() {
-    emailjs.send("service_ouy8aq4","template_s2cz87r",{
-to_name: "dsg",
-from_name: "sdf",
-ответ_на: "asdf",
-});
+    emailjs.send("service_ouy8aq4", "template_s2cz87r", {
+        to_name: "Мастер Чист",
+        from_name: "Клиент",
+        reply_to: "",
+    });
 }
 
 function success() {
-swal({
-title: "Отлично!",
-text: "В ближайшее время с вами свжуться!",
-icon: "success",
-button: "Закрыть",
-});
+    swal({
+        title: "Отлично!",
+        text: "В ближайшее время с вами свжуться!",
+        icon: "success",
+        button: "Закрыть",
+    });
 }
 
 function error() {
-swal({
-title: "Ошибка!",
-text: "Попробуйте ещё раз",
-icon: "error",
-button: "Закрыть",
-});
+    swal({
+        title: "Ошибка!",
+        text: "Попробуйте ещё раз",
+        icon: "error",
+        button: "Закрыть",
+    });
 }
 
 function inputempty() {
-swal({
-title: "О нет!",
-text: "Вы не все данные указали",
-icon: "error",
-button: "Закрыть",
-});
-} */
+    swal({
+        title: "О нет!",
+        text: "Вы не указали все данные",
+        icon: "error",
+        button: "Закрыть",
+    });
+}
+const sendEmail = () => {
+    window.emailjs.sendForm(
+        'service_ouy8aq4',
+        'template_s2cz87r',
+        '#contact-form',
+        '6ly8F3tTDCKSfbSSE'
+    )
+        .then(() => {
+            success();
+        })
+        .catch((error) => {
+            error();
+        });
+};
